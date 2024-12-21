@@ -46,7 +46,7 @@ let i=0
 
 // console.log(variable.nombre)
 
-/*function dividir(a,b){
+function dividir(a,b){
     try {
         if (b===0) {
             throw new Error("No se puede krnal")
@@ -59,5 +59,5 @@ let i=0
 }
 
 dividir(3,0) 
-*/
+
 
