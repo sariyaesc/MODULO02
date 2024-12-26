@@ -3,49 +3,225 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Practicas_JS</title>
 </head>
-<body>
-    <h1 id="titulo"></h1>
-    <button id="boton">cambiar de color</button>
-    <input type="text" id="entrada" placeholder="escribe algo">
-    <p>Lo que escribiste: <span id="salida"></span></p>
-    <button id="contarBtn">Haz clic</button>
-    <p>Clics: <span id="contador">0</span></p>
+<body class="font-mono m-16">
+    <header class="text-5xl ">Practicas JavaScript</header>
+    <h1 class="mt-6 text-lg">Practica 2.1</h1>
+    <p>Ingresa un numero para verificar si es par o impar</p>
+    <input type="number" placeholder="12345" class="border-2" id="numparINP">
+    <p>Tu numero es: <span  id="numparR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numparBT">Checa el resultado</button>
+    
+    <h1 class="mt-6 text-lg">Practica 2.2</h1>
+    <p>Ingresa tres numeros para verificar cual es el mayor</p>
+    <input type="number" placeholder="Num #1" class="border-2" id="nummayorINP1">
+    <input type="number" placeholder="Num #2" class="border-2" id="nummayorINP2">
+    <input type="number" placeholder="Num #3" class="border-2" id="nummayorINP3">
+    <p>El numero mayor/es es: <span  id="nummayorR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="nummayorBT">Checa el resultado</button>
 
-    <button id="toggleBtn">Mostrar/Ocultar</button>
-    <p id="text" style="display: none">Este es el texto oculto</p>
+    <h1 class="mt-6 text-lg">Practica 2.3</h1>
+    <p>Ingresa un numero para verificar tu calificacion</p>
+    <input type="number" min="0" max="10" placeholder="0" class="border-2" id="numcalINP">
+    <p>Tu calificacion es: <span  id="numcalR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numcalBT">Checa el resultado</button>
 
-    <script>
-        const titulo = document.getElementById("titulo");
-        titulo.textContent="Holiii :)"
-        const boton=document.getElementById("boton")
-        boton.addEventListener("click",()=>{
-            document.body.style.backgroundColor = "lightblue"
-        })
-        const entrada= document.getElementById('entrada')
-        const salida=document.getElementById('salida')
-        entrada.addEventListener('input',()=>{
-            salida.textContent=entrada.value
-        })
+    <h1 class="mt-6 text-lg">Practica 2.4</h1>
+    <p>Ingresa un numero para verificar si es valido (0-100) o fuera del rango</p>
+    <input type="number" placeholder="0" class="border-2" id="numrangoINP">
+    <p>Tu rango es: <span  id="numrangoR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numrangoBT">Checa el resultado</button>
 
-        const contarBtn=document.getElementById('contarBtn')
-        const contador=document.getElementById('contador')
-        let cuenta=0
-        contarBtn.addEventListener('click',()=>{
-            cuenta++
-            contador.textContent=cuenta
-        })
+    <h1 class="mt-6 text-lg">Practica 2.5</h1>
+    <p>Ingresa un numero para obtener su serie de Fibonacci</p>
+    <input type="number" placeholder="0" class="border-2" id="numfibINP">
+    <p>La serie de  tu numero es: <span  id="numfibR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numfibBT">Checa el resultado</button>
 
-        const toggleBtn=document.getElementById('toggleBtn')
-        const text=document.getElementById('text')
-        let visible=false
-        toggleBtn.addEventListener('click',()=>{
-            visible=!visible;
-            texto.style.display=visible ? 'block': 'none'
-        })
+    <h1 class="mt-6 text-lg">Practica 2.6</h1>
+    <p>Ingresa un numero para verificar si es un palindromo</p>
+    <input type="number" placeholder="0" class="border-2" id="numpalINP">
+    <p>¿Es un palíndromo?: <span  id="numpalR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numpalBT">Checa el resultado</button>
+
+<!--PRACT 1-->
+    <script >
+        const numparINP=document.getElementById("numparINP")
+        const numparR=document.getElementById("numparR")
+        const numparBT=document.getElementById("numparBT")
+
+        numparBT.addEventListener("click",()=>{
+           const num=parseInt(numparINP.value,10)
+    if (isNaN(num)) {
+        numparR.textContent="Ingresa un valor"}
+    else if (num==0) {
+        numparR.textContent="Es indefinido"}
+    else if (num%2==0) {
+        numparR.textContent="Es par"} 
+    else if (num%2!=0) {
+        numparR.textContent="Es impar"}})
+    
+
+    //#region PRACT 2-->
+    
 
     </script>
+
+<!--PRACT 2-->
+    <script>
+        const nummayorINP1=document.getElementById("nummayorINP1")
+        const nummayorINP2=document.getElementById("nummayorINP2")
+        const nummayorINP3=document.getElementById("nummayorINP3")
+
+        const nummayorBT=document.getElementById("nummayorBT")
+        const nummayorR=document.getElementById("nummayorR")
+
+        nummayorBT.addEventListener('click',()=>{
+            const a=parseFloat(nummayorINP1.value)
+            const b=parseFloat(nummayorINP2.value)
+            const c=parseFloat(nummayorINP3.value)
+    
+            if (isNaN(a) || isNan(b) || isNan(c)) {
+                nummayorR.textContent="Faltan valores por ingresar"}
+
+    else if (a>b && a>c){
+        nummayorR.textContent=a,'es el num mayor'
+    }
+    else if (b>a && b>c){
+        nummayorR.textContent=b,'es el num mayor'
+    }
+    else if (c>a && c>b){
+        nummayorR.textContent=c,'es el num mayor'
+    }
+
+    else if (a==b){
+        nummayorR.textContent='Hay un empate entre '+a+' y '+b
+    }
+    else if (a==c){
+        nummayorR.textContent='Hay un empate entre '+a+' y '+c
+    }
+    else if (b==c){
+        nummayorR.textContent='Hay un empate entre '+b+' y '+c
+    }
+        })
+    </script>
+
+<!--PRACT 3-->
+<script>
+    const numcalifINP= document.getElementById("numcalINP")
+    const numcalifR= document.getElementById("numcalR")
+    const numcalBT= document.getElementById("numcalBT")
+
+    numcalBT.addEventListener("click", ()=>{
+        const num=parseInt(numcalifINP.value)
+        
+    if (isNaN(num)) {
+        numcalifR.textContent="Ingresa un valor"
+    }
+    else if (num>0 && num<=5) {
+        numcalifR.textContent="Reprobado"
+    }
+    else if (num==6 || num==7){
+        numcalifR.textContent="Regular"
+    }
+    else if (num==8){
+        numcalifR.textContent="Bien"
+    }
+    else if (num==9){
+        numcalifR.textContent="Muy bien"
+    }
+    else if (num==10){
+        numcalifR.textContent="Excelente"
+    }
+    })
+</script>
+
+<!--PRACT 4-->
+<script>
+    const numrangoINP=document.getElementById("numrangoINP")
+    const numrangoR=document.getElementById("numrangoR")
+    const numrangoBT=document.getElementById("numrangoBT")
+
+    numrangoBT.addEventListener("click", ()=>{
+        const num=parseInt(numrangoINP.value)
+
+        if (isNaN(num)) {
+            numrangoR.textContent="Ingresa un valor"
+        }
+        else if (num>=0 && num<=100) {
+        numrangoR.textContent="Numero valido, dentro del rango (0-100)"
+    }
+    else{
+        numrangoR.textContent="Numero invalido, fuera del rango (0-100)"
+    }
+            
+        }
+    )
+</script>
+
+<!--PRACT 5-->
+<script>
+ const numfibINP=document.getElementById("numfibINP")
+ const numfibR=document.getElementById("numfibR")
+ const numfibBT=document.getElementById("numfibBT")
+
+ numfibBT.addEventListener("click",()=>{
+    const num=parseInt(numfibINP.value)
+
+    if (isNaN(num) || num<=0) {
+        numfibR.textContent="Ingresa un valor valido"
+    }
+    else{
+    let a0=0
+    let a1=1
+    const secuencia=[a0,a1]
+    let r=a0+a1
+
+    while (r<num) {
+        secuencia.push(r)
+        a0=a1
+        a1=r
+        r=a0+a1
+        
+        }
+        numfibR.textContent=secuencia
+    }
+ })
+</script>
+
+<!--PRACT 6-->
+<script>
+    const numpalINP=document.getElementById("numpalINP")
+    const numpalR=document.getElementById("numpalR")
+    const numpalBT=document.getElementById("numpalBT")
+
+    numpalBT.addEventListener("click",()=>{
+        const num=parseInt(numpalINP.value)
+
+        if(num>0 && (Number.isInteger(num)==true)){
+            let numS=num.toString()
+     let secuencia=[...numS]
+
+     let length=secuencia.length
+
+    for (let index = 0; index < length-2; index++) {
+        let a=secuencia[index]
+        let b=secuencia[length-index-1]
+        
+        if (a!==b) {
+            numpalR.textContent='No es un palindromo'
+            return 
+        } 
+            
+    } numpalR.textContent="Es un palindromo"
+
+        }else {
+            numpalR.textContent="Tiene que ser un entero positivo"
+        }
+    })
+</script>
 
 </body>
 </html>
