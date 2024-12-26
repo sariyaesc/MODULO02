@@ -6,46 +6,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Practicas_JS</title>
 </head>
-<body class="font-mono m-16">
-    <header class="text-5xl ">Practicas JavaScript</header>
-    <h1 class="mt-6 text-lg">Practica 2.1</h1>
-    <p>Ingresa un numero para verificar si es par o impar</p>
-    <input type="number" placeholder="12345" class="border-2" id="numparINP">
-    <p>Tu numero es: <span  id="numparR"></span></p>
-    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numparBT">Checa el resultado</button>
+<body class="font-mono m-16 ">
+
     
-    <h1 class="mt-6 text-lg">Practica 2.2</h1>
+    <header class="text-6xl mb-5 bg-green-900/70 p-4">Practicas JavaScript</header>
+
+    <div class="grid lg:grid-cols-2 sm:grid-cols-1 gap-10">
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.1</h1>
+    <p >Ingresa un numero para verificar si es par o impar</p>
+    <input type="number" placeholder="12345" class="border-2" id="numparINP">
+    <p class="font-medium ">Tu numero es: <span  id="numparR"></span></p>
+    <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numparBT">Checa el resultado</button>
+    </section>
+    
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.2</h1>
     <p>Ingresa tres numeros para verificar cual es el mayor</p>
     <input type="number" placeholder="Num #1" class="border-2" id="nummayorINP1">
     <input type="number" placeholder="Num #2" class="border-2" id="nummayorINP2">
     <input type="number" placeholder="Num #3" class="border-2" id="nummayorINP3">
-    <p>El numero mayor/es es: <span  id="nummayorR"></span></p>
+    <p class="font-medium">El numero mayor/es es: <span  id="nummayorR"></span></p>
     <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="nummayorBT">Checa el resultado</button>
+</section>
 
-    <h1 class="mt-6 text-lg">Practica 2.3</h1>
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.3</h1>
     <p>Ingresa un numero para verificar tu calificacion</p>
     <input type="number" min="0" max="10" placeholder="0" class="border-2" id="numcalINP">
-    <p>Tu calificacion es: <span  id="numcalR"></span></p>
+    <p class="font-medium">Tu calificacion es: <span  id="numcalR"></span></p>
     <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numcalBT">Checa el resultado</button>
+</section>
 
-    <h1 class="mt-6 text-lg">Practica 2.4</h1>
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.4</h1>
     <p>Ingresa un numero para verificar si es valido (0-100) o fuera del rango</p>
     <input type="number" placeholder="0" class="border-2" id="numrangoINP">
-    <p>Tu rango es: <span  id="numrangoR"></span></p>
+    <p class="font-medium">Tu rango es: <span  id="numrangoR"></span></p>
     <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numrangoBT">Checa el resultado</button>
+</section>
 
-    <h1 class="mt-6 text-lg">Practica 2.5</h1>
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.5</h1>
     <p>Ingresa un numero para obtener su serie de Fibonacci</p>
     <input type="number" placeholder="0" class="border-2" id="numfibINP">
-    <p>La serie de  tu numero es: <span  id="numfibR"></span></p>
+    <p class="font-medium">La serie de  tu numero es: <span  id="numfibR"></span></p>
     <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numfibBT">Checa el resultado</button>
+</section>
 
-    <h1 class="mt-6 text-lg">Practica 2.6</h1>
+    <section>
+    <h1 class="mt-6 text-xl font-semibold bg-green-900/30">Practica 2.6</h1>
     <p>Ingresa un numero para verificar si es un palindromo</p>
     <input type="number" placeholder="0" class="border-2" id="numpalINP">
-    <p>¿Es un palíndromo?: <span  id="numpalR"></span></p>
+    <p class="font-medium">¿Es un palíndromo?: <span  id="numpalR"></span></p>
     <button class="border-2 p-1 text-xs hover:bg-neutral-400" id="numpalBT">Checa el resultado</button>
+</section>
 
+</div>
 <!--PRACT 1-->
     <script >
         const numparINP=document.getElementById("numparINP")
