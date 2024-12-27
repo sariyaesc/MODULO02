@@ -1,7 +1,6 @@
 function anagrama(pal1,pal2) {
     let pal1s=[...pal1.toLowerCase()].sort();
     let pal2s=[...pal2.toLowerCase()].sort();
-
     let length1=pal1s.length
     let length2=pal2s.length
 
@@ -18,4 +17,4 @@ function anagrama(pal1,pal2) {
     
 }
 
-anagrama("hola","aloh")
+anagrama("nati","tina")
