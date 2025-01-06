@@ -1,25 +1,24 @@
-import toast,{Toaster} from "react-hot-toast"
-import Button from "@/components/common/Button"
 
 export default function Home() {
-  //AQUI VA LA LOGICA EN JS
-  const handleClick=() =>toast.success("Hola mundo")
+    return (
+        <>
+        <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+        <link rel="stylesheet" href="/styles/global.css"></link>
+        </head>
 
-  return (
-    //AQUI VA EL HTML
-    <>
-    <div className="h-14 bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div class='gradient-bg'>
+        <div class='gradients-container'>
+            <div class='g1'></div>
+            <div class='g2'></div>
+            <div class='g3'></div>
+            <div class='g4'></div>
+            <div class='g5'></div>
 
-      <Toaster position="top-center"></Toaster>
-      <h1 className="text-2xl bg-white text-black">Hola mundo :D</h1>
-      <p>Esto es un test</p>
-      <p>Hola</p>
-      <button onClick={handleClick}>Click</button>
-      <Button noty="ALERTAAAA">HOLAAA</Button>
-
-    </div>
-    </>
-    
-    
-  );
+        </div>
+        </div>
+        </>
+    );
 }
